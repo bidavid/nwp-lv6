@@ -1,0 +1,22 @@
+extends layout
+
+block content
+    table
+        tr
+            th Name
+            th Desc
+            th Price
+            th Start date
+            th End date
+            th Actions
+        each project in projects
+            tr
+                td= project.name
+                td= project.description
+                td= project.price
+                td= project.startDate
+                td= project.endDate
+                td
+                    a(href='/project/edit/'+project._id) Edit
+                    a(href='/project/delete/'+project._id style='margin-right: 10px; margin-left:10px') Delete
+                    a(href='/project/add-member/'+project._id) New Member

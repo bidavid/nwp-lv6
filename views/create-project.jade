@@ -1,0 +1,33 @@
+extends layout
+
+block content
+    form(action='/project' method='post')
+        section
+            label Name:
+                input(type='text', name='name' value=project.name)
+
+        section
+            label Desc:
+                input(type='text', name='description' value=project.description)
+        section
+            label Price:
+                input(type='number', name='price' value=project.price)
+        section
+            label Jobs Done:
+                textarea(name='jobsDone')= project.jobsDone
+        section
+            label Start Date:
+                input(type='date', name='startDate' value=project.startDate)
+        section
+            label End Date:
+                input(type='date', name='endDate' value=project.endDate)
+                input(type='hidden' name='id' value=project.id)
+        section
+            label
+                input(type='submit' name='submit' value='Submit')
+
+    section
+    if project.members
+        h5 Project members
+        each member in project.members
+            li=member
