@@ -10,6 +10,7 @@ var projectsRouter = require('./routes/projects');
 
 require('./model/db')
 require('./model/projects')
+require('./model/users')
 
 var app = express();
 

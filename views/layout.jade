@@ -6,6 +6,8 @@ html
   body
     nav
       a(href='/project/create' style="margin-right:10px") New Project
-
-      a(href='/project') All Projects
+      a(href='/project?owner=true&archived=false' style="margin-right:10px") Owned projects
+      a(href='/project?owner=false&archived=false' style="margin-right:10px") Assigned to projects
+      a(href='/project?owner=true&archived=true' style="margin-right:10px") Owned projects (archived)
+      a(href='/project?owner=false&archived=true') Assigned to projects (archived)
     block content

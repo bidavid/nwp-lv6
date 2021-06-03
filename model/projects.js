@@ -1,4 +1,5 @@
-var mongoose = require('mongoose');  
+var mongoose = require('mongoose');
+const Schema = mongoose.Schema
 var blobSchema = new mongoose.Schema({  
   name: String,
   description: String,
@@ -6,6 +7,8 @@ var blobSchema = new mongoose.Schema({
   jobsDone: String,
   startDate: Date,
   endDate: Date,
-  members: [String],
+  members: [{ type: Schema.Types.ObjectId, ref: 'User' }],
+  owner: { type: Schema.Types.ObjectId, ref: 'User' },
+  archived: Boolean
 });
 mongoose.model('Project', blobSchema);

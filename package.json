@@ -1,5 +1,5 @@
 {
-  "name": "faks",
+  "name": "nwp-lv6",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -12,6 +12,7 @@
     "http-errors": "~1.6.3",
     "jade": "~1.11.0",
     "mongoose": "^5.12.9",
-    "morgan": "~1.9.1"
+    "morgan": "~1.9.1",
+    "uuid": "^8.3.2"
   }
 }

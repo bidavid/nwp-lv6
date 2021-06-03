@@ -18,5 +18,7 @@ block content
                 td= project.endDate
                 td
                     a(href='/project/edit/'+project._id) Edit
-                    a(href='/project/delete/'+project._id style='margin-right: 10px; margin-left:10px') Delete
-                    a(href='/project/add-member/'+project._id) New Member
+                    if isOwner
+                        a(href='/project/delete/'+project._id style='margin-right: 10px; margin-left:10px') Delete
+                        a(href='/project/add-member/'+project._id style='margin-right: 10px;') New Member
+                        a(href='/project/archive/'+project._id) Archive
